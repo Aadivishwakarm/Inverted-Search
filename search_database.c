@@ -22,6 +22,7 @@ void search_database(file_list **hash)
 
     while (temp)
     {
+        printf("\n🔍 Searching for: %s\n", word);
         if (strcmp(temp->word, word) == 0)
         {
             printf("Word FOUND: %s\n", word);
@@ -30,7 +31,7 @@ void search_database(file_list **hash)
             file_node *f = temp->fhead;
             while (f)
             {
-                printf("  %s -> %d\n", f->fname, f->count);
+                printf("  └── %s -> %d\n", f->fname, f->count);
                 f = f->fnext;
             }
             return;
