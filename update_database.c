@@ -19,13 +19,13 @@ int get_word_total_count(file_list *word_node)
 int update_database(file_list **hash)
 {
     char filename[50];
-    printf("Enter file name to update database: ");
+    printf("\n📥 Enter file name to update database: ");
     scanf("%49s", filename);
 
     FILE *fp = fopen(filename, "r");
     if (!fp)
     {
-        printf("Error: Cannot open file %s\n", filename);
+        printf("❌ Error: Cannot open file %s\n", filename);
         return FAILURE;
     }
 
@@ -95,7 +95,7 @@ int update_database(file_list **hash)
         }
 
         fclose(fp);
-        printf("Database loaded successfully from backup file\n");
+        printf("\n✔ Database loaded successfully from backup file\n");
         return SUCCESS;
     }
 
@@ -113,6 +113,6 @@ int update_database(file_list **hash)
     }
 
     fclose(fp);
-    printf("Database updated using %s\n", filename);
+    printf("\n✔ Database updated successfully using %s\n", filename);
     return SUCCESS;
 }
