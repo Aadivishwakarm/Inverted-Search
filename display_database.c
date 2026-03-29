@@ -20,16 +20,13 @@ void display_database(file_list **hash)
             file_node *f = w->fhead;
             while (f)
             {
-                printf("%s(%d) ", f->fname, f->count/2);
+                printf(" └── %s : %d\n", f->fname, f->count/2);
                 f = f->fnext;
             }
 
             printf("\n");
             w = w->next;
         }
-
-        // printf("--------------------------------------------------\n");
     }
-    // printf("\n");
     printf("---------------------------------------------------\n");
 }
