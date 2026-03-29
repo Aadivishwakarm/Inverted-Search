@@ -28,12 +28,18 @@ int main(int argc, char *argv[])
 
     while (1)
     {
-        printf("\n1. Create Database\n");
+        printf("INVERTED SEARCH PROJECT (C)\n");
+        printf("Author: Aditya Shirawal\n");
+        printf("====================================\n");
+        printf("        INVERTED SEARCH MENU\n");
+        printf("====================================\n");
+        printf("1. Create Database\n");
         printf("2. Search Database\n");
         printf("3. Display Database\n");
         printf("4. Update Database\n");
         printf("5. Save Database\n");
         printf("6. Exit\n");
+        printf("====================================\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -89,22 +95,9 @@ int main(int argc, char *argv[])
 
             /* UPDATE DATABASE (BACKUP ONLY) */
             case 4:
-                if (db_created)
-                {
-                    printf("Update not allowed after Create Database.\n");
-                }
-                else if (db_loaded)
-                {
-                    printf("Database already loaded from backup.\n");
-                }
-                else
-                {
-                    update_database(hash);   // loads database.txt
-                    db_loaded = 1;
-                    printf("Database loaded from backup.\n");
-                }
+                update_database(hash);
                 break;
-
+            
             /* SAVE DATABASE */
             case 5:
                 if (!db_created && !db_loaded)
