@@ -26,10 +26,12 @@ int main(int argc, char *argv[])
 
     int choice;
 
+    printf("INVERTED SEARCH PROJECT (C)\n");
+    printf("Author: Aditya Shirawal\n");
+
     while (1)
     {
-        printf("INVERTED SEARCH PROJECT (C)\n");
-        printf("Author: Aditya Shirawal\n");
+        
         printf("====================================\n");
         printf("        INVERTED SEARCH MENU\n");
         printf("====================================\n");
